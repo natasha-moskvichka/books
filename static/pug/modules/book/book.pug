@@ -1,5 +1,3 @@
-// Подключаем данные для блока book
-
 include book-data
 
 section.book
@@ -22,33 +20,10 @@ section.book
                     .book__information
                         h2.book__heading Информация
                         ul.book__info-list
-                            li.book__info-item
-                                span.book__term= book.information[0].term
-                                span.book__def= book.information[0].def
-                            li.book__info-item
-                                span.book__term= book.information[1].term
-                                span.book__def= book.information[1].def
-                            li.book__info-item
-                                span.book__term= book.information[2].term
-                                span.book__def= book.information[2].def
-                            li.book__info-item
-                                span.book__term= book.information[3].term
-                                span.book__def= book.information[3].def
-                            li.book__info-item
-                                span.book__term= book.information[4].term
-                                span.book__def= book.information[4].def
-                            li.book__info-item
-                                span.book__term= book.information[5].term
-                                span.book__def= book.information[5].def
-                            li.book__info-item
-                                span.book__term= book.information[6].term
-                                span.book__def= book.information[6].def
-                            li.book__info-item
-                                span.book__term= book.information[7].term
-                                span.book__def= book.information[7].def
-                            li.book__info-item
-                                span.book__term= book.information[8].term
-                                span.book__def= book.information[8].def
+                          each info in book.information
+                              li.book__info-item
+                                  span.book__term= info.term
+                                  span.book__def= info.def
                     .book__annotation
                         h2.book__heading Аннотация
                         p.book__text= book.annotation
