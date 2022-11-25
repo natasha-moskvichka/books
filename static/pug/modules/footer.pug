@@ -2,7 +2,7 @@ footer.footer
     .container
         .footer__wrapper
             .footer__col
-                a.footer__logo-link
+                a.footer__logo-link(href=pageClass === "index-page" ? false : "index.html")
                     span.visually-hidden Логотип сайта "По полочкам"
                     .
                         <svg class='footer__logo' width='230' height='35' viewBox='0 0 230 35' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -57,9 +57,9 @@ footer.footer
                         h4.footer-nav__title Меню
                         ul.footer-nav__sub-list
                             li.footer-nav__sub-item
-                                a.footer-nav__link Главная
+                                a.footer-nav__link(href=pageClass === "index-page" ? false : "index.html") Главная
                             li.footer-nav__sub-item
-                                a.footer-nav__link Каталог книг
+                                a.footer-nav__link(href=pageClass === "catalog-page" ? false : "catalog.html") Каталог книг
                             li.footer-nav__sub-item
                                 a.footer-nav__link(href='#') Оплата и доставка
                             li.footer-nav__sub-item

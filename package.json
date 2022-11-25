@@ -5,7 +5,7 @@
   "scripts": {
     "start": "concurrently \"yarn run sync\" \"yarn run pug\"",
     "pug": "pug ./static/pug/ --pretty -w -o ./",
-    "sync": "browser-sync start --files=\"./**/*.css,./**/*.js, **/*.html,./**/**/.pug\" -s"
+    "sync": "browser-sync start --files=\"./**/*.css,./**/*.js, **/*.html,./**/**/.pug\" --index=\"./layout/layout.html\" -s"
   },
   "dependencies": {
     "browser-sync": "2.27.5",
